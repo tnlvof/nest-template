@@ -29,8 +29,8 @@ class Application {
     this.corsOriginList = process.env.CORS_ORIGIN_LIST
       ? process.env.CORS_ORIGIN_LIST.split(',').map((origin) => origin.trim())
       : ['*'];
-    this.ADMIN_USER = process.env.ADMIN_USER || 'amamov';
-    this.ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || '1205';
+    this.ADMIN_USER = process.env.ADMIN_USER || 'admin';
+    this.ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'rhtmxm1!';
   }
 
   private setUpBasicAuth() {
@@ -52,7 +52,7 @@ class Application {
       SwaggerModule.createDocument(
         this.server,
         new DocumentBuilder()
-          .setTitle('Yoon Sang Seok - API')
+          .setTitle('nest-template - API')
           .setDescription('TypeORM In Nest')
           .setVersion('0.0.1')
           .build(),
